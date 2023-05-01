@@ -30,4 +30,8 @@ export const styles = StyleSheet.create({
       width: 64,
       height: 64,
     },
+    pressed: {
+      color: 'rgba(255, 255, 10, 0.8)',
+      borderless: true
+    }
   });
