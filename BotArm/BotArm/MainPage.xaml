@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BotArm.MainPage"
+             Title="BotArm"
+             >
+
+    <ScrollView>
+        <StackLayout>
+
+            <VerticalStackLayout x:Name="ControlsPanel" >
+                <VerticalStackLayout VerticalOptions="Start" HorizontalOptions="Center" Margin="32">
+                    <ImageButton 
+                        Source="Resources/Images/arrow.png"
+                        Pressed="UpPressed"
+                        Released="ButtonReleased"
+                        Rotation="270"
+                        MaximumHeightRequest="48"
+                        MaximumWidthRequest="48"
+                    />
+
+                    <HorizontalStackLayout HorizontalOptions="Center" MaximumHeightRequest="48" Spacing="48">
+                        <ImageButton 
+                            Source="Resources/Images/arrow.png"
+                            Pressed="LeftPressed"
+                            Released="ButtonReleased"
+                            Rotation="180"
+                            MaximumWidthRequest="48"
+                        />
+                        <ImageButton 
+                            Source="Resources/Images/arrow.png"
+                            Pressed="RighPressed"
+                            Released="ButtonReleased"
+                            MaximumWidthRequest="48"
+                        />
+                    </HorizontalStackLayout>
+
+                    <ImageButton 
+                        Source="Resources/Images/arrow.png"
+                        Pressed="DownPressed"
+                        Released="ButtonReleased"
+                        Rotation="90"
+                        MaximumHeightRequest="48"
+                        MaximumWidthRequest="48"
+                    />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout VerticalOptions="Start" HorizontalOptions="Center" Margin="32">
+                    <ImageButton 
+                        Source="Resources/Images/arrow.png"
+                        Pressed="FrontPressed"
+                        Released="ButtonReleased"
+                        Rotation="270"
+                        MaximumHeightRequest="48"
+                        MaximumWidthRequest="48"
+                    />
+
+                    <HorizontalStackLayout HorizontalOptions="Center" MaximumHeightRequest="48" Spacing="48">
+                        <ImageButton 
+                            Source="Resources/Images/closed_hand.png"
+                            Pressed="ClosePressed"
+                            Released="ButtonReleased"
+                            MaximumWidthRequest="48"
+                        />
+                        <ImageButton 
+                            Source="Resources/Images/opened_hand.png"
+                            Pressed="OpenPressed"
+                            Released="ButtonReleased"
+                            MaximumWidthRequest="48"
+                        />
+                    </HorizontalStackLayout>
+
+                    <ImageButton 
+                        Source="Resources/Images/arrow.png"
+                        Pressed="BackPressed"
+                        Released="ButtonReleased"
+                        Rotation="90"
+                        MaximumHeightRequest="48"
+                        MaximumWidthRequest="48"
+                    />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout VerticalOptions="Start" HorizontalOptions="Center" Margin="32">
+                    <HorizontalStackLayout HorizontalOptions="Center" MaximumHeightRequest="48" Spacing="48">
+                        <ImageButton 
+                        Source="Resources/Images/automatic.png"
+                        Clicked="AutomaticClicked"
+                        MaximumWidthRequest="48"
+                    />
+                        <ImageButton 
+                        Source="Resources/Images/pause.png"
+                        Clicked="ButtonReleased"
+                        MaximumWidthRequest="48"
+                    />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout VerticalOptions="Start" Margin="8" HorizontalOptions="Center">
+                <Label x:Name="DeviceLabel" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout VerticalOptions="Start" Margin="32">
+                <Button Text="Select device" Clicked="SwitchDeviceClickedAsync"/>
+            </VerticalStackLayout>
+
+        </StackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
